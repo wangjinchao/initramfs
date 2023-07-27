@@ -1,0 +1,6 @@
+#!/bin/sh
+mount -t proc none /proc
+mount -t sysfs none /sys
+mdev -s
+setsid cttyhack /bin/sh
+exec bin/init
